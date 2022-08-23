@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Java",
+      "path": "마인드맵/computer science/Java/Java.md"
+    },
+    {
+      "basename": "computer science",
+      "path": "마인드맵/computer science.md"
+    },
+    {
       "basename": "프로그래밍 패러다임",
       "path": "마인드맵/computer science/ETC/프로그래밍 패러다임.md"
     },
     {
       "basename": "Spring",
       "path": "마인드맵/computer science/Spring/Spring.md"
-    },
-    {
-      "basename": "computer science",
-      "path": "마인드맵/computer science.md"
     },
     {
       "basename": "패러다임-이미지",

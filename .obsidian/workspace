@@ -7,9 +7,11 @@
         "id": "cbf0f0e59e65ba38",
         "type": "leaf",
         "state": {
-          "type": "mindmapView",
+          "type": "markdown",
           "state": {
-            "file": "마인드맵/computer science/ETC/프로그래밍 패러다임.md"
+            "file": "README.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -118,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "마인드맵/computer science/ETC/프로그래밍 패러다임.md"
+                "file": "README.md"
               }
             }
           },
@@ -128,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "마인드맵/computer science/ETC/프로그래밍 패러다임.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "마인드맵/computer science/ETC/프로그래밍 패러다임.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,15 +185,15 @@
   },
   "active": "cbf0f0e59e65ba38",
   "lastOpenFiles": [
-    "마인드맵/computer science/Spring/Spring.md",
+    "마인드맵/computer science/Java/Java.md",
     "마인드맵/computer science.md",
+    "README.md",
+    "마인드맵/computer science/ETC/프로그래밍 패러다임.md",
+    "마인드맵/computer science/Spring/Spring.md",
     "마인드맵/computer science/ETC/패러다임-이미지.png",
     "Day Planners/Day Planner-20220823.md",
     "Day Planners/Memo/220823-2258.md",
-    "마인드맵/computer science/ETC/프로그래밍 패러다임.md",
     "마인드맵/computer science/네트워크/네트워크.md",
-    "마인드맵/computer science/데이터베이스/데이터베이스.md",
-    "마인드맵/computer science/운영체제/운영체제.md",
-    "마인드맵/computer science/Java/Java.md"
+    "마인드맵/computer science/데이터베이스/데이터베이스.md"
   ]
 }
