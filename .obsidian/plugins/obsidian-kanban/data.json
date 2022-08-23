@@ -1,0 +1,7 @@
+{
+  "new-note-folder": "kanban",
+  "show-checkboxes": false,
+  "prepend-archive-date": true,
+  "show-relative-date": true,
+  "new-note-template": "Template/칸반템플릿.md"
+}

@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "computer science",
+      "path": "마인드맵/computer science.md"
+    },
+    {
+      "basename": "네트워크",
+      "path": "마인드맵/computer science/네트워크/네트워크.md"
+    },
+    {
+      "basename": "데이터베이스",
+      "path": "마인드맵/computer science/데이터베이스/데이터베이스.md"
+    },
+    {
+      "basename": "운영체제",
+      "path": "마인드맵/computer science/운영체제/운영체제.md"
+    },
+    {
+      "basename": "Spring",
+      "path": "마인드맵/computer science/Spring/Spring.md"
+    },
+    {
+      "basename": "프로그래밍 패러다임",
+      "path": "마인드맵/computer science/ETC/프로그래밍 패러다임.md"
+    },
+    {
+      "basename": "Java",
+      "path": "마인드맵/computer science/Java/Java.md"
+    },
+    {
+      "basename": "8월4째주",
+      "path": "Day Planners/kanban/8월4째주.md"
+    },
+    {
+      "basename": "노트템플릿",
+      "path": "Template/노트템플릿.md"
+    },
+    {
       "basename": "Day Planner-20220823",
       "path": "Day Planners/Day Planner-20220823.md"
     },
     {
-      "basename": "템플릿",
-      "path": "Template/템플릿.md"
-    },
-    {
-      "basename": "cs",
-      "path": "마인드맵/cs.md"
+      "basename": "칸반템플릿",
+      "path": "Template/칸반템플릿.md"
     }
   ],
   "omittedPaths": [],

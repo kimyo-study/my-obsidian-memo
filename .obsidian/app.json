@@ -1,4 +1,12 @@
 {
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "spellcheckLanguages": [
+    "ko",
+    "en-US"
+  ],
+  "spellcheck": true,
+  "showLineNumber": true,
+  "attachmentFolderPath": "./",
+  "trashOption": "local"
 }

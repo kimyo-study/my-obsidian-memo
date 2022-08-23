@@ -4,11 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "b17aea3e43d87e09",
+        "id": "cbf0f0e59e65ba38",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "mindmapView",
+          "state": {
+            "file": "마인드맵/computer science.md"
+          }
         }
       }
     ],
@@ -21,7 +23,7 @@
       {
         "id": "80a86b60ede74882",
         "type": "tabs",
-        "dimension": 58.644067796610166,
+        "dimension": 69.37853107344633,
         "children": [
           {
             "id": "365835967e2c6d05",
@@ -37,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Calen",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -51,7 +53,7 @@
       {
         "id": "b1d6b289f22c005b",
         "type": "tabs",
-        "dimension": 41.35593220338983,
+        "dimension": 30.621468926553675,
         "children": [
           {
             "id": "db1a0ca41430c06f",
@@ -73,7 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.0055809020996
+    "width": 354.5055809020996
   },
   "right": {
     "id": "195caee4d586b269",
@@ -82,7 +84,7 @@
       {
         "id": "c07b6aa4d8fad0c5",
         "type": "tabs",
-        "dimension": 32.316384180790955,
+        "dimension": 33.10734463276836,
         "children": [
           {
             "id": "ce5e448d0ee9298e",
@@ -108,14 +110,16 @@
       {
         "id": "71306295762eeaf7",
         "type": "tabs",
-        "dimension": 27.005649717514125,
+        "dimension": 30.621468926553675,
         "children": [
           {
             "id": "d4b081f3dd2d33ab",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "마인드맵/computer science.md"
+              }
             }
           },
           {
@@ -124,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "마인드맵/computer science.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,6 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "마인드맵/computer science.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +156,7 @@
       {
         "id": "3902aa968a505928",
         "type": "tabs",
-        "dimension": 40.67796610169492,
+        "dimension": 36.271186440677965,
         "children": [
           {
             "id": "7404fc7d58f4c9c6",
@@ -172,19 +178,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.18414306640625
+    "width": 394.18408203125,
+    "collapsed": true
   },
-  "active": "b17aea3e43d87e09",
+  "active": "365835967e2c6d05",
   "lastOpenFiles": [
-    "Day Planners/Day Planner-20220823.md",
-    "Template/템플릿.md",
-    "마인드맵/cs.md",
-    "CS/운영체제/무제노트.md",
-    "CS/Java/무제노트.md",
-    "Excalidraw/Drawing 220823-1315.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-23 13.14.14.excalidraw.md",
-    "Excalidraw/Drawing 2022-08-23 13.14.18.excalidraw.md",
-    "2022-08-23.md",
-    "220825-3.md"
+    "마인드맵/computer science/네트워크/네트워크.md",
+    "마인드맵/computer science.md",
+    "마인드맵/computer science/데이터베이스/데이터베이스.md",
+    "마인드맵/computer science/운영체제/운영체제.md",
+    "마인드맵/computer science/Spring/Spring.md",
+    "마인드맵/computer science/ETC/프로그래밍 패러다임.md",
+    "마인드맵/computer science/Java/Java.md",
+    "Day Planners/kanban/8월4째주.md"
   ]
 }
