@@ -23,9 +23,51 @@ mindmap-plugin: basic
 
 ## JVM
 - 메모리 구조
+- JVM이란?
+   - 자바와 운영체제 사이에서 중개자 역할을 수행
+   - 운영체제에 구애 받지 않고 프로그램을 `실행`할 수 있도록 도와줌 (단, JVM은 운영체제에 종속적)
+   - 가비지 컬렉터를 사용한 메모리 관리 자동 수행
+   - 다른 하드웨어와 다르게 레지스터 기반이 아닌 스택 기반으로 동작
+- 구조
+   - Class Loader
+      - 런타임 시에 동적으로 클래스를 로드
+      - JVM 내로 클래스 파일을 로드하고, 링크를 통해 배치하는 작업을 수행하는 모듈
+   - Execution Engine
+      - 클래스 로더를 통해 JVM 내의 Runtime Data Area에 배치된 바이트 코드들을 명렁어 단위로 읽어서 실행
+      - 인터프리터 방식 → (일정 기준이 넘어가면) → JIT컴파일러 방식
+   - GC
+      - 힙 메모리 영역에 생성된 객체들 중에서 참조되지 않은 객체들을 탐색 후 제거하는 역할
+   - Runtime Data Area
+      - JVM의 메모리 영역으로 자바 애플리케이션을 실행할 때 사용되는 데이터들을 적재하는 영역
+         - Method Area
+            - 모든 쓰레드가 공유하는 메모리 영역
+            - 클래스, 인터페이스, 메소드, 필드, Static 변수 등의 바이트 코드를 보관
+         - Heap Area
+            - 모든 쓰레드가 공유하며, new 키워드로 생성된 객체와 배열이 생성되는 영역
+            - 메소드 영역에 로드된 클래스만 생성이 가능
+            - Garbage Collector가 참조되지 않는 메모리를 확인하고 제거하는 영역
+         - Stack Area
+         - PC register
+            - 현재 수행중인 JVM 명령의 주소를 갖는다
+            - 쓰레드가 시작될 때 생성
+            - 생성될 때마다 생성되는 공간으로 쓰레드마다 하나씩 존재
+            - 쓰레드가 어떤 부분을 무슨 명령으로 실행해야할 지에 대한 기록을 하는 부분
+         - Native Method Stack
+            - 자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역
+      - 참고 : https://steady-coding.tistory.com/305
 
 ## GC (Garbage Collector)
+- GC란?
+   - 힙 메모리 영역에 생성된 객체들 중에서 참조되지 않은 객체들을 탐색 후 제거하는 역할
 - 동작과정
+- 종류
+   - Serial GC
+   - Parallel GC
+   - Parallel Old GC
+   - CMS GC (Concurrent Mark-Sweep)
+   - G1 GC
+      - Java 9 버전부터 기본 GC 방식으로 채택
+   - 참고 : https://s2choco.tistory.com/14
 
 ## Java의 컴파일 과정
 - 과정
