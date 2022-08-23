@@ -6,9 +6,20 @@ mindmap-plugin: basic
 
 # Java
 
-## JDK
+## JDK : java Development Kit
+- Java 개발 목적
+- 특징
+   - JRE를 포함하고 있음 (JDK ⊃ JRE)
+- 구성
+   - JVM
+   - 자바 클래스 라이브러리
+   - 자바 명령
 
-## JRE
+## JRE : Java Runtime Environment
+- Java 실행 목적
+- 특징
+   - Java용 SDK(Software Development Kit)
+   - javac가 있다?
 
 ## JVM
 - 메모리 구조
@@ -16,7 +27,11 @@ mindmap-plugin: basic
 ## GC (Garbage Collector)
 - 동작과정
 
-## Java LTS 버전
+## Java의 컴파일 과정
+
+## 컴파일 언어 vs 인터프리터 언어
+
+## Java LTS 버전
 - Java 8
    - 함수형프로그래밍 지원
       - 람다표현식
