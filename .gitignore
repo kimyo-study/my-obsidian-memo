@@ -1,2 +1,5 @@
 .trash
 /Day Planners
+.obsidian/plugins/recent-files-obsidian/*
+.obsidian/workspace/*
+.obsidian/workspace
