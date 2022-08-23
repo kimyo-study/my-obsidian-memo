@@ -1,0 +1,190 @@
+{
+  "main": {
+    "id": "7323d34a232cec1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b17aea3e43d87e09",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "63e2f39e7192a501",
+    "type": "split",
+    "children": [
+      {
+        "id": "80a86b60ede74882",
+        "type": "tabs",
+        "dimension": 58.644067796610166,
+        "children": [
+          {
+            "id": "365835967e2c6d05",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "bcf17a05d04c8e3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "b1d6b289f22c005b",
+        "type": "tabs",
+        "dimension": 41.35593220338983,
+        "children": [
+          {
+            "id": "db1a0ca41430c06f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "d6925832a09372d1",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 304.0055809020996
+  },
+  "right": {
+    "id": "195caee4d586b269",
+    "type": "split",
+    "children": [
+      {
+        "id": "c07b6aa4d8fad0c5",
+        "type": "tabs",
+        "dimension": 32.316384180790955,
+        "children": [
+          {
+            "id": "ce5e448d0ee9298e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "b080c2a493449c7e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "71306295762eeaf7",
+        "type": "tabs",
+        "dimension": 27.005649717514125,
+        "children": [
+          {
+            "id": "d4b081f3dd2d33ab",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "e6b817daf49ba161",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "114a96f29d9bb037",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "3902aa968a505928",
+        "type": "tabs",
+        "dimension": 40.67796610169492,
+        "children": [
+          {
+            "id": "7404fc7d58f4c9c6",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          },
+          {
+            "id": "ead4199b8bf0a9d4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 397.18414306640625
+  },
+  "active": "b17aea3e43d87e09",
+  "lastOpenFiles": [
+    "Day Planners/Day Planner-20220823.md",
+    "Template/템플릿.md",
+    "마인드맵/cs.md",
+    "CS/운영체제/무제노트.md",
+    "CS/Java/무제노트.md",
+    "Excalidraw/Drawing 220823-1315.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-23 13.14.14.excalidraw.md",
+    "Excalidraw/Drawing 2022-08-23 13.14.18.excalidraw.md",
+    "2022-08-23.md",
+    "220825-3.md"
+  ]
+}
