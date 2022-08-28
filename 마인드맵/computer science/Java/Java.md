@@ -10,6 +10,7 @@ mindmap-plugin: basic
 - Java 개발 목적
 - 특징
    - JRE를 포함하고 있음 (JDK ⊃ JRE)
+   - javac가 있다
 - 구성
    - JVM
    - 자바 클래스 라이브러리
@@ -19,9 +20,8 @@ mindmap-plugin: basic
 - Java 실행 목적
 - 특징
    - Java용 SDK(Software Development Kit)
-   - javac가 있다?
 
-## JVM
+## JVM ^afca81fa-0cb1-26b9
 - 메모리 구조
 - JVM이란?
    - 자바와 운영체제 사이에서 중개자 역할을 수행
@@ -29,7 +29,7 @@ mindmap-plugin: basic
    - 가비지 컬렉터를 사용한 메모리 관리 자동 수행
    - 다른 하드웨어와 다르게 레지스터 기반이 아닌 스택 기반으로 동작
 - 구조
-   - Class Loader
+   - Class Loader ^6f801167-65a9-8884
       - 런타임 시에 동적으로 클래스를 로드
       - JVM 내로 클래스 파일을 로드하고, 링크를 통해 배치하는 작업을 수행하는 모듈
    - Execution Engine
@@ -56,21 +56,71 @@ mindmap-plugin: basic
             - 자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역
       - 참고 : https://steady-coding.tistory.com/305
 
-## GC (Garbage Collector)
+## GC (Garbage Collector) ^a51c5b6a-3884-76d0
 - GC란?
    - 힙 메모리 영역에 생성된 객체들 중에서 참조되지 않은 객체들을 탐색 후 제거하는 역할
+   - Java의 GC는 2가지 가정에 기반해 설계됨 (weak generational hypothesis)
+      - 대부분의 객체는 금방 unreachable 상태가 된다
+      - 오래된 객체에서 최근 생긴 객체로의 참조는 거의 없다.
+   - 2가지 가정에 의해 설계된 Heap 메모리 구조는 Young/Old 영역으로 나뉨
+      - Young
+         - 새로운 객체가 생성되는 위치
+         - Young 영역에서 Old 영역으로 객체가 이동하는 것을 `Promotion` 되었다고 표현
+      - Old
+         - Young 영역에서 임계치 보다 오래 살아남은 객체들이 넘어오는 영역
+         - 이 영역에서 일어나는 GC를 `Major GC` 또는 `Full GC`라고 한다.
+            그럴 경우에는 STW(=Stop The World)가 발생해 JVM이 GC 스레드 빼고 모두 일시적으로 멈추는 현상 발생
+         - 일반적으로 GC 튜닝을 한다는 것은 Old 영역에서 발생하는 STW 시간을 단축시키는 것을 의미
+         - 512 바이트 chunk의 card table 존재
+            - old 객체에서 young 객체로의 참조 정보를 담고 있어
+               Minor GC 실행시  메모리 회수 대상인지 아닌지를 빠르게 판단
+               - 약간의 overhead가 발생하지만 전반적인 GC 시간을 줄여준다
+      - Permanent Generation
+         - Old 영역에서도 GC에서 오래 살아남은 객체들이 이동
+            - Major GC로 unreachable한 객체를 회수
+            - Major GC이기 때문에 STW가 발생
 - 동작과정
-- 종류
+   - Minor GC 동작
+      - Copy & Scavenge 알고리즘
+         - 속도가 빠르고 작은 크키의 메모리의 GC에 효과적
+      - Young 영역에 있는 객체가 GC에서 살아 남을 때마다
+         `Tenuring Threshold` 값이 1씩 증가하다가 살아 남은 횟수가 Max 값에 도달하면 Old 영역으로 Promotion되는 것
+         - 기본 Max 값은 31이고, 이는 MaxTenuringThreshold 옵션을 통해 변경 가능
+   - Major GC(Full GC)
+      - Major GC를 수행할 때 어디에 초점을 맞추느냐에 따라 2가지 방식으로 구분할 수 있다
+         - Throughput Collector
+            - GC를 수행할 때 모든 리소스를 투입해서 GC를 빨리 끝내자. STW 시간을 단축시키는 것이 목적
+            - Serial GC, Parallel GC, Parallel Old GC
+         - Low Pause(Latency) Collector
+            - STW가 발생을 분산시켜 체감 pause time을 줄이자. GC 수행과 동시에 작업도 수행할 수 있다.
+            - CMS, G1 GC
+- 종류 ^6063678a-85ed-85ef
    - Serial GC
+      - Minor GC & Major GC를 하나의 스레드로 작업
    - Parallel GC
+      - Minor GC는 멀티 스레드로 작업하고 Major GC는 하나의 스레드로 작업
    - Parallel Old GC
+      - Minor GC & Major GC 모두 멀티 스레드로 작업한다.
+         - Multi CPU에 유리
+         - Old GC의 처리량이 증가
    - CMS GC (Concurrent Mark-Sweep)
+      - Low Latency GC로 Compaction을 기본적으로 수행하지 않다가 단편화가 심해지면 수행
    - G1 GC
       - Java 9 버전부터 기본 GC 방식으로 채택
+      - CMS의 문제점을 개선하기 위해 만들어진 GC로 위의 4가지 방법과 구조가 다르다.
+         - 물리적 Generation 구분을 없애고
+            전체 Heap을 1~32MB 단위의 Region들로 재편 (약 2048개의 Regions들로 나눌수있음)
+            - 각 Region은 상태에 따라 역할이 동적으로 부여
+      - 역할
+         - Humongous 추가
+            - Region 크기의 50%가 넘는 큰 객체를 저장하기 위한 영역
+            - GC 동작이 최적으로 동작하지 않는다
+         - Available / Unused 추가
+            - 아직 사용되지 않는 영역
    - 참고 : https://s2choco.tistory.com/14
 
 ## Java의 컴파일 과정
-- 과정
+- 과정 ^8feb6dd4-2470-fca8
    - java 파일 작성 → .java
    - 자바 컴파일러가 .java 컴파일 → .class
    - JVM 클래스로더에게 전달
@@ -118,7 +168,7 @@ mindmap-plugin: basic
    - 자바 바이트코드는 자바 인터프리터를 기계어로 번역되어 한줄씩 실행된다
    - 처음에는 인터프리터 언어로써 사용되다가 성능향상을 위해 JIT 컴파일러를 추가하여 컴파일 언어의 장점을 가져왔다고 한다
 
-## Java LTS 버전
+## Java LTS 버전 ^037e2495-b631-4e82
 - Java 8
    - 함수형프로그래밍 지원
       - 람다표현식
