@@ -18,6 +18,6 @@ mindmap-plugin: basic
 
 ## ETC
 - GIT
-- [[프로그래밍 패러다임]]
+- [[기타]]
 
 ## [[자료구조]]
